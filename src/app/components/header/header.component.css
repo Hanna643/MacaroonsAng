@@ -1,0 +1,127 @@
+.header {
+  background-color: rgb(235, 168, 177);
+  padding: 36px 0 29px 0;
+}
+
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu__list {
+  list-style: none;
+  display: flex;
+  width: 315px;
+  justify-content: space-between;
+  margin-right: 95px;
+}
+
+.menu__link {
+  font-family: Gilroy-Medium, sans-serif;
+  text-decoration: none;
+  font-size: 14px;
+  color: rgb(119, 11, 29);
+  border-bottom: 2px solid transparent;
+}
+
+.menu__link:hover {
+  border-bottom: 2px solid rgb(130, 19, 40);
+  padding-bottom: 3px;
+}
+
+.header__burger {
+  display: none;
+}
+
+.menu__close {
+  display: none;
+}
+
+/*768 - 1023*/
+@media screen and (max-width: 1023px) {
+  .header__phone {
+    display: none;
+  }
+
+  .header {
+    padding: 38px 0 27px 0;
+  }
+  .header__container {
+    justify-content: flex-start;
+  }
+
+  .menu__list {
+    margin-right: initial;
+    margin-left: 103px;
+  }
+}
+/*425 - 767*/
+@media screen and (max-width: 767px) {
+  .header__container {
+    display: block;
+  }
+  .menu__list {
+    margin-left: initial;
+    margin-top: 20px;
+  }
+}
+/*375 - 424*/
+@media screen and (max-width: 424px) {
+  .header {
+    padding: 34px 0 27px 0;
+  }
+  .header__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menu {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    top: 0;
+    left: 0;
+    background: #000000c9;
+    z-index: 1000;
+  }
+
+  .menu__list {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 auto;
+  }
+
+  .menu__item {
+    margin: 15px 0;
+  }
+
+  .menu__link {
+    font-size: 32px;
+    color: rgb(242 196 203);
+  }
+
+  .menu__close {
+    display: block;
+    width: 24px;
+    height: 24px;
+    fill: rgb(242 196 203);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+
+  .header__burger {
+    display: block;
+    order: 2;
+  }
+
+  .menu.open {
+    display: flex;
+    align-items: center;
+  }
+}
