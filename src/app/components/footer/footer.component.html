@@ -19,7 +19,8 @@
       <a href="#" class="number">+375 (29) 368-98-68</a>
     </div>
   </div>
-  <div class="footer__present" [style.display]="showPresent === true ? 'block' : 'none' "]="">
+<!--  <div class="footer__present" [style.display]="showPresent === true ? 'block' : 'none' "]="">-->
+    <div class="footer__present" *ngIf="showPresent">
     <button class="footer__button">
       <img src="assets/images/present.png" alt="present">
       <div class="footer__present-text">
