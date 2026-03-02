@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
-
+  instagram: string = 'https://www.instagram.com/';
+  showPresent: boolean = true;
   constructor() { }
 
   ngOnInit(): void {

@@ -25,19 +25,19 @@
                             </svg>
       </div>
       <ul class="menu__list">
-<!--        <li class="menu__item">-->
-<!--          <a class="menu__link" (click)="scrollTo(macaroons)">Пироженки</a>-->
-<!--        </li>-->
-<!--        <li class="menu__item">-->
-<!--          <a href="#" class="menu__link" (click)="scrollTo(info)">О нас</a>-->
-<!--        </li>-->
-<!--        <li class="menu__item">-->
-<!--          <a href="#" class="menu__link" (click)="scrollTo(order)">Оформить заказ</a>-->
-<!--        </li>-->
+        <li class="menu__item">
+          <a class="menu__link" routerLink="/" fragment="macaroons">Пироженки</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link" routerLink="/" fragment="info">О нас</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link" routerLink="/" fragment="order">Оформить заказ</a>
+        </li>
       </ul>
     </nav>
     <div class="header__phone">
-      <a href="#" class="number">+375 (29) 368-98-68</a>
+      <a href="#" class="number">{{phone}}</a>
     </div>
   </div>
 </header>
