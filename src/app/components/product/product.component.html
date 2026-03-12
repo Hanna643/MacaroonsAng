@@ -1,0 +1,14 @@
+<div class="products__item">
+  <div class="products__image">
+    <img src="assets/images/{{product.image}}" class="products__img" alt="cake">
+  </div>
+  <div class="products__name">
+    {{ product.name }}
+  </div>
+  <div class="products__quantity">{{ product.quantity }}</div>
+  <div class="products__price">{{ product.price }}</div>
+  <div class="products__action">
+    <a class="button products__button">Заказать</a>
+<!--    <a class="button products__button" (click)="addToCart(product, order)">Заказать</a>-->
+  </div>
+</div>

@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {ProductType} from "./types/product.type";
+import {AdvantageType} from "./types/advantage.type";
 
 @Component({
   selector: 'app-root',
@@ -36,20 +37,24 @@ export class AppComponent {
     }
   ];
 
-  protected readonly advantages = [
+  protected readonly advantages: AdvantageType[] = [
     {
+      item: 1,
       info: 'Лучшие продукты',
       text: 'Мы честно готовим макаруны только из натуральных и качественных продуктов. Мы не используем консерванты, ароматизаторы и красители.'
     },
     {
+      item: 2,
       info: 'Много вкусов',
       text: 'Наша задача – предоставить вам широкое разнобразие вкусов. Вы удивитесь, но у нас более 70 вкусов пироженок.'
     },
     {
+      item: 3,
       info: 'Бисквитное тесто',
       text: 'Все пирожные готовятся на бисквитном тесте с качественным сливочным маслом 82,5%. В составе нет маргарина и дрожжей!'
     },
     {
+      item: 4,
       info: 'Честный продукт',
       text: 'Вкус, качество и безопасность наших пирогов подтверждена декларацией о соответствии, которую мы получили 22.06.2016 г.'
     }
