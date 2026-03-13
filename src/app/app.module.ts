@@ -8,6 +8,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProductComponent } from './components/product/product.component';
 import { AdvantageComponent } from './components/advantage/advantage.component';
+import { CoolButtonDirective } from './directives/cool-button.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AdvantageComponent } from './components/advantage/advantage.component';
     HeaderComponent,
     FooterComponent,
     ProductComponent,
-    AdvantageComponent
+    AdvantageComponent,
+    CoolButtonDirective
   ],
   imports: [
     BrowserModule,

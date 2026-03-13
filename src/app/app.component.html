@@ -5,7 +5,7 @@
       Macaroon!
     </div>
     <div class="main__actions">
-      <a class="button main__button" (click)="scrollTo(macaroons)">Выбрать макарун</a>
+      <a class="button main__button" coolButton (click)="scrollTo(macaroons)">Выбрать макарун</a>
     </div>
 
     <div class="main__image">
@@ -66,7 +66,7 @@
         <div class="form-text order__form-text">Заполните данные для заказа</div>
         <input class="order__input" type="text" placeholder="Ваше имя" [(ngModel)]="formValues.name">
         <input class="order__input" type="text" placeholder="+375 (__) ___ - __ - __" [(ngModel)]="formValues.phone">
-        <button class="button order__button" (click)="createOrder()">Оформить заказ</button>
+        <button class="button order__button" coolButton (click)="createOrder()">Оформить заказ</button>
       </div>
     </div>
   </div>
