@@ -71,8 +71,9 @@ export class AppComponent {
   };
 
   protected addToCart(product: ProductType, target: HTMLElement): void {
-    this.scrollTo(target);
-    this.formValues.productName = product.name.toUpperCase();
+    // this.scrollTo(target);
+    // this.formValues.productName = product.name.toUpperCase();
+    alert(`${product.name} добавлен в корзину!`);
   };
 
   protected createOrder(): void {
