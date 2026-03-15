@@ -66,17 +66,17 @@
 
 .footer__text {
   font-family: Gilroy-Medium, sans-serif;
-  font-size: 15px;
+  font-size: 17px;
   color: rgb(119, 10, 29);
   position: absolute;
-  width: 155px;
+  width: 80px;
   border: 2px solid rgb(119, 10, 29);
-  top: -83px;
-  left: -205px;
+  top: -15px;
+  left: -124px;
   border-radius: 10px;
   padding: 10px;
   background-color: rgb(254, 239, 238);
-  text-align: start;
+  text-align: center;
   white-space: pre-line;
   transform: translate(0, 380%);
   transition: all .7s;
@@ -106,11 +106,11 @@
 }
 
 .footer__button:hover .footer__text {
-  transform: translate(0, 170%);
+  transform: translate(0, 100%);
 }
 
 .footer__button::before {
-  content: '';
+  content: attr(data-count);
   font-family: Gilroy-Medium, sans-serif;
   position: absolute;
   top: -9px;
@@ -178,6 +178,18 @@
   }
 
   .footer__text {
-    bottom: 96px;
+    bottom: 50px;
+    padding: 5px;
+  }
+  .footer__text::before {
+    bottom: 5px;
+    right: -8.8px;
+  }
+  .footer__text::after {
+    bottom: 4px;
+  }
+  .footer__present img {
+    width: 33px;
+    height: 32px;
   }
 }

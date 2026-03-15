@@ -22,11 +22,10 @@
   </div>
   <!--  <div class="footer__present" [style.display]="showPresent === true ? 'block' : 'none' "]="">-->
   <div class="footer__present" *ngIf="showPresent">
-    <button class="footer__button">
+    <button class="footer__button" [attr.data-count]="cartService.count">
       <img src="assets/images/cart.png" alt="cart">
       <div class="footer__present-text">
-        <div class="footer__text">Оформите заказ
-          и получите подарок!
+        <div class="footer__text">{{ cartService.sum | currency:'BYN':'':'1.2-2' }}  руб.
         </div>
       </div>
     </button>

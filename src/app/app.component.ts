@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {ProductType} from "./types/product.type";
 import {AdvantageType} from "./types/advantage.type";
 import {ProductService} from "./services/product.service";
+import {CartService} from "./services/cart.service";
 
 @Component({
   selector: 'app-root',
@@ -43,7 +44,8 @@ export class AppComponent {
     phone: ''
   }
 
-  constructor(private productService: ProductService) {
+  constructor(private productService: ProductService,
+              public cartService: CartService) {
   }
 
   protected scrollTo(target: HTMLElement): void {
@@ -53,6 +55,8 @@ export class AppComponent {
   protected addToCart(product: ProductType, target: HTMLElement): void {
     // this.scrollTo(target);
     // this.formValues.productName = product.name.toUpperCase();
+    this.cartService.count++;
+    this.cartService.sum = Math.round((this.cartService.sum + product.price) * 100)/100;
     alert(`${product.name} добавлен в корзину!`);
   };
 
