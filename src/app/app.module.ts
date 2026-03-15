@@ -9,6 +9,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ProductComponent } from './components/product/product.component';
 import { AdvantageComponent } from './components/advantage/advantage.component';
 import { CoolButtonDirective } from './directives/cool-button.directive';
+import { TruncatePipe } from './pipe/truncate.pipe';
+import { PhoneFormatPipe } from './pipe/phone-format.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { CoolButtonDirective } from './directives/cool-button.directive';
     FooterComponent,
     ProductComponent,
     AdvantageComponent,
-    CoolButtonDirective
+    CoolButtonDirective,
+    TruncatePipe,
+    PhoneFormatPipe
   ],
   imports: [
     BrowserModule,
