@@ -11,6 +11,7 @@ import { AdvantageComponent } from './components/advantage/advantage.component';
 import { CoolButtonDirective } from './directives/cool-button.directive';
 import { TruncatePipe } from './pipe/truncate.pipe';
 import { PhoneFormatPipe } from './pipe/phone-format.pipe';
+import {ProductService} from "./services/product.service";
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { PhoneFormatPipe } from './pipe/phone-format.pipe';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent, HeaderComponent, FooterComponent]
 })
 export class AppModule { }

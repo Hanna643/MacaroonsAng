@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {ProductType} from "./types/product.type";
 import {AdvantageType} from "./types/advantage.type";
+import {ProductService} from "./services/product.service";
 
 @Component({
   selector: 'app-root',
@@ -8,34 +9,10 @@ import {AdvantageType} from "./types/advantage.type";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
   protected readonly title = 'MacaroonsAng';
 
-  protected readonly products: ProductType[] = [
-    {
-      image: 'image1.png',
-      name: 'Макарун с малиной',
-      quantity: '1 шт.',
-      price: 1.70
-    },
-    {
-      image: 'image2.png',
-      name: 'Макарун с манго',
-      quantity: '1 шт.',
-      price: 1.70
-    },
-    {
-      image: 'image3.png',
-      name: 'Пирог с ванилью',
-      quantity: '1 шт.',
-      price: 1.70
-    },
-    {
-      image: 'image4.png',
-      name: 'Пирог с фисташками',
-      quantity: '1 шт.',
-      price: 1.70
-    }
-  ];
+  public products: ProductType[] = [];
 
   protected readonly advantages: AdvantageType[] = [
     {
@@ -64,6 +41,9 @@ export class AppComponent {
     productName: '',
     name: '',
     phone: ''
+  }
+
+  constructor(private productService: ProductService) {
   }
 
   protected scrollTo(target: HTMLElement): void {
@@ -95,6 +75,10 @@ export class AppComponent {
       name: '',
       phone: ''
     };
+  }
+
+  ngOnInit() {
+    this.products = this.productService.getProducts();
   }
 }
 

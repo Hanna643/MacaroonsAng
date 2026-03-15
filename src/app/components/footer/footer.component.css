@@ -108,6 +108,30 @@
 .footer__button:hover .footer__text {
   transform: translate(0, 170%);
 }
+
+.footer__button::before {
+  content: '';
+  font-family: Gilroy-Medium, sans-serif;
+  position: absolute;
+  top: -9px;
+  right: -8px;
+  background-color: rgb(254, 239, 238);
+  font-size: 19px;
+  color: rgb(119, 10, 29);
+  min-width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid rgb(119, 10, 29);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__present img {
+  width: 53px;
+  height: 52px;
+}
+
 /*425 - 767*/
 @media screen and (max-width: 767px) {
   .footer {
